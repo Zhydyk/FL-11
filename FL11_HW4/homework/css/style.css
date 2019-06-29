@@ -32,15 +32,15 @@ body{
     text-decoration: none;
     color: #F3F3F3;
 }
-.nav ul{
+nav ul{
     display: flex;
     padding: 45px 0px;
 }
-.nav ul li{
+nav ul li{
     list-style-type: none;
     padding: 0 0 0 50px;
 }
-.nav ul li a{
+nav ul li a{
     color: #F3F3F3;
     text-decoration: none;
 }
@@ -227,11 +227,20 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 0 40px 0;
+}
+.subscribe_text p{
+    padding: 20px 0;
 }
 input[type="email"]{
     padding: 10px;
     outline: none;
     margin: 0 15px;
+    border: 1px solid #000000;
+}
+input[type="email"]::-webkit-input-placeholder{
+    color: #000000;
+    font-weight: bold;
 }
 .form_subscribe .btn-primary{
     width: 10%;
@@ -240,4 +249,22 @@ input[type="email"]{
     border:0;
     outline: none;
     background-color: rgba(9, 119, 116, 1);;
+}
+.form_subscribe p{
+    font-size: 24px;
+}
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer p{
+    margin-right: auto;
+    color: #9E9E9E;
+}
+.footer nav ul{
+    padding: 10px 0;
+}
+.footer nav ul li{
+    padding: 0 0 0 35px;
 }
