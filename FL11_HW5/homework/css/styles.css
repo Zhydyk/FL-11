@@ -3,14 +3,13 @@
  * Feel free to add new colors if you need it
  */
 
-:root {
+/* :root {
     --bg-color--dark: #0b192f;
     --bg-color--header: #162b4d;
     --link: #fff;
     --link--hover: #b8b8b8;
     --bg-footer-color: #162b4d;
-    ;
-}
+} */
 
 body {
     font-family: roboto;
