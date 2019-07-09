@@ -5,6 +5,8 @@ let totalPrice = 0;
 let divider = 2;
 let repeat = true;
 let win = 100;
+let attempt = 4;
+let priceIncreace = 2;
 
 if(confirm('Do you want to play a game?')){
     while(repeat){
@@ -26,8 +28,8 @@ if(confirm('Do you want to play a game?')){
             // start next level of game
 
                 if (repeat === true) {
-                    win *= 2;
-                    randomMaxNumber += 4;
+                    win *= priceIncreace;
+                    randomMaxNumber += attempt;
                 } else if (repeat === false) {
                     break;
                 }
