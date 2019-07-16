@@ -1,38 +1,4 @@
 // Your code goes here
-const data = [
-    {
-      "_id": "5b5e3168c6bf40f2c1235cd6",
-      "index": 0,
-      " birthday ": '2016-03-18T00:00:00',
-      "eyeColor": "green",
-      "name": "Stein",
-      "favoriteFruit": "apple"
-    },
-    {
-      "_id": "5b5e3168e328c0d72e4f27d8",
-      "index": 1,
-      " birthday ": '1991-02-11T00:00:00',
-      "eyeColor": "blue",
-      "name": "Cortez",
-      "favoriteFruit": "strawberry"
-    },
-    {
-      "_id": "5b5e3168cc79132b631c666a",
-      "index": 2,
-      " birthday ": '1984-04-17T00:00:00',
-      "eyeColor": "blue",
-      "name": "Suzette",
-      "favoriteFruit": "apple"
-    },
-    {
-      "_id": "5b5e31682093adcc6cd0dde5",
-      "index": 3,
-      " birthday ": '1994-04-17T00:00:00',
-      "eyeColor": "green",
-      "name": "George",
-      "favoriteFruit": "banana"
-    }
-  ]
 // Task 0
 function getNumbers(string) {
     let arr = [];
@@ -92,10 +58,14 @@ function canConvertToDate(string){
 }
 // Task 7
 function daysBetween(dat1, dat2){
- let date1 = dat1.getTime();
- let date2 = dat2.getTime();
- let difference = date1 - date2;
- let perDayMs = 1000 * 60 * 60 * 24;
+    let min = 60;
+    let sec = 60;
+    let ms = 1000;
+    let hours = 24
+    let date1 = dat1.getTime();
+    let date2 = dat2.getTime();
+    let difference = date1 - date2;
+    let perDayMs = ms * min * sec * hours;
 
     difference = Math.abs(Math.floor(difference / perDayMs));
 
@@ -103,15 +73,18 @@ function daysBetween(dat1, dat2){
 }
 // Task 8
 function getAmountOfAdultPeople(data){
-    // let foundProp = ' birthday ';
+    let foundKey = ' birthday ';
     let listPeople = 0;
+    let daysOfYear = 365;
+    let ageOver = 18
+
 
   filterArray(data, function(index) {
-      if( index.hasOwnProperty('birthday') ) {
+      if( index.hasOwnProperty(foundKey) ) {
         let dateNow = new Date();
-        let birthDay = new Date(index[birthday]);
-        let personAge = daysBetween(birthDay, dateNow ) / 365;
-        if (personAge >= 18) {
+        let birthDay = new Date(index[foundKey]);
+        let peopleAge = daysBetween(birthDay, dateNow ) / daysOfYear;
+        if (peopleAge >= ageOver) {
           listPeople++;
         }
       }
