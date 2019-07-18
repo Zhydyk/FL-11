@@ -97,11 +97,10 @@ function keys(obj) {
     let arr = [];
     for (let keys in obj) {
         if (obj.hasOwnProperty(keys)) {
-            arr.push(obj[keys]);
+            arr.push(keys);
         }
     }
     return arr;
-
 }
 // Task 10
 function values(obj) {
