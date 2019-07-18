@@ -93,23 +93,23 @@ function getAmountOfAdultPeople(data){
   return listPeople;
 }
 // Task 9
-function keys(arr) {
-    let object = [];
-    for (let keys in arr) {
-        if (arr.hasOwnProperty(keys)) {
-            object.push(keys);
+function keys(obj) {
+    let arr = [];
+    for (let keys in obj) {
+        if (obj.hasOwnProperty(keys)) {
+            arr.push(obj[keys]);
         }
     }
-    return object;
+    return arr;
 
 }
 // Task 10
-function values(arr) {
-    let object = [];
-    for (let values in arr) {
-        if (arr.hasOwnProperty(values)) {
-            object.push(arr[values]);
+function values(obj) {
+    let arr = [];
+    for (let values in obj) {
+        if (obj.hasOwnProperty(values)) {
+            arr.push(obj[values]);
         }
     }
-    return object;
+    return arr;
 }
