@@ -70,9 +70,3 @@ function battle(fighter1, fighter2){
         }
     }
 }
-// const myFighter = new Fighter({name:'Roman', damage:20, hp: 100, agility:20 });
-// const myFighter1 = new Fighter({name:'Roman1', damage:10, hp: 120, agility:40 });
-// let health = myFighter.getHealth();
-// console.log(health);
-// let health1 = myFighter1.getHealth();
-// console.log(health1);
