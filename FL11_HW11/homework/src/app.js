@@ -17,10 +17,18 @@ let addButton = document.getElementById('btn-add');
         }
     }
 }
+    
+//Drag&Drop
+function allowDrop(ev) {
+    ev.preventDefault();
+}
 
 function createList(text){
     let ulEl = document.getElementById('list')
     let liEl = document.createElement('li');
+        liEl.setAttribute('draggable', 'true');
+        liEl.setAttribute('ondragover', 'allowDrop(event)');
+
     let leftBlock = document.createElement('div');
         leftBlock.setAttribute('class', 'left-block');
     let buttonCheckbox = document.createElement('button');
@@ -61,7 +69,7 @@ function createList(text){
     liEl.appendChild(rightBlock);
     rightBlock.appendChild(deleteButton);
     deleteButton.appendChild(deleteIcon);
-
+    
     //delete task
     deleteButton.onclick = function deleteItem(){
         liEl.remove();
