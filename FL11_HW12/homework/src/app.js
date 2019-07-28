@@ -10,6 +10,7 @@ let addItems = document.getElementById('add');
         addElements(mainEl);
 }
 
+
 function addElements() {
     let h1El = document.createElement('h1');
         h1El.innerHTML = 'Add task';
@@ -55,6 +56,11 @@ function addElements() {
         } else if (inputValue === '') {
             addButtonEl.disabled = false;
         }
+//Insert Bottom
+        let insertBottom = (item, list) => {
+            item.remove();
+            list.appendChild(item);
+        }
 //Function Create List    
         function createList(text){
             let liEl = document.createElement('li');
@@ -70,16 +76,11 @@ function addElements() {
                 liEl.appendChild(checkboxIcon);
                 liEl.appendChild(spanEl);
                 liEl.appendChild(iconDeleteEl);
-//
+//Change checkbox mark and background
             checkboxIcon.onclick = function() {
-                if(checkboxIcon){
                     checkboxIcon.src = './assets/img/done-s.png';
                     liEl.style.setProperty('background-color', '#999999');
-                }else{
-                    console.log('Ok');
-                    checkboxIcon.src('./assets/img/todo-s.png');
-                    liEl.style.setProperty('background-color', '#FFFFFF');
-                }
+                
                 insertBottom(liEl, ulEl);
             }
 //delete list
@@ -92,12 +93,6 @@ function addElements() {
 
             }
         }
-            
-        let insertBottom = (item, list) => {
-            item.remove();
-            list.appendChild(item);
-        }
-
     }
 
 }
