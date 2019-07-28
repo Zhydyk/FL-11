@@ -1,0 +1,59 @@
+/* Your styles go here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#root #main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttonsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsDiv button {
+    margin: 25px 0;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#main a,
+p {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px 0;
+}
