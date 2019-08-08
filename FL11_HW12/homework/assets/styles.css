@@ -1,59 +1,86 @@
-/* Your styles go here */
-
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-
 #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
     margin: 0 auto;
+    width: 900px;
 }
-
-#root #main {
+div {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    align-items: center;
 }
-
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 45px;
 }
-
-.buttonsDiv {
-    display: flex;
+.addnewBtn {
+    border-radius: 15px;
+    padding: 10px 40px;
+    font-size: 25px;
+}
+.addnewInput {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.inARow {
+    margin: 20px 0;
+    width: 100%;
+    flex-flow: row nowrap;
     justify-content: space-between;
 }
-
-.buttonsDiv button {
-    margin: 25px 0;
+.cancleBtn,
+.saveBtn {
+    border-radius: 15px;
+    font-size: 20px;
 }
-
-button {
-    border-radius: 10px;
-    padding: 5px 25px;
+.emptyText {
+    font-size: 30px;
+    text-align: center;
 }
-
 ul {
-    display: flex;
-    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    width: 60%;
 }
-
 li {
     display: flex;
-    list-style-type: none;
+    flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.item_text {
+    cursor: pointer;
+    margin: 0;
+    font-size: 30px;
+}
+.alertMsg {
+    top: 1%;
+    width: fit-content;
+    position: absolute;
+    background-color: red;
+    font-size: 20px;
+    padding: 10px 30px;
+    color: white;
+    animation: 2s opacity ease;
 }
 
-#main a,
-p {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    margin: 20px 0;
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
 }
