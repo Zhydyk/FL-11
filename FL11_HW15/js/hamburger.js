@@ -1,5 +1,5 @@
-class Hamburger{
-    constructor(type, calories, typeSecretIngredient){
+class Hamburger {
+    constructor(type, calories, typeSecretIngredient) {
         let _calories = calories;
         let cheeseCalories = 120;
         let tomatoCalories = 20;
@@ -7,12 +7,19 @@ class Hamburger{
         let cheese = 0;
         let tomato = 0;
         let secretIngredient = 0;
+        let biteValue = 0;
 
         this.type = type;
+
         this.getCalories = () => _calories;
         this.setCalories = (caloriesValue) => _calories = caloriesValue;
+        if (typeSecretIngredient) {
+            this.addSecretIngredient();
+        }
         this.addCheese = () => {
-            if (cheese < 1) {
+            if (biteValue >= 1) {
+                console.log('Sorry, you can not add cheese');
+            } else if (cheese < 1) {
                 _calories += cheeseCalories;
                 cheese++;
             } else {
@@ -20,7 +27,9 @@ class Hamburger{
             }
         }
         this.addTomato = () => {
-            if (tomato <= 1) {
+            if (biteValue >= 1) {
+                console.log('Sorry, you can not add tomato');
+            } else if (tomato <= 1) {
                 _calories += tomatoCalories;
                 tomato++;
             } else {
@@ -28,7 +37,9 @@ class Hamburger{
             }
         }
         this.addSecretIngredient = () => {
-            if (cheese !== 0 || tomato !== 0) {
+            if (biteValue >= 1) {
+                console.log('Sorry, you cannot add secret ingredient');
+            } else if (cheese !== 0 || tomato !== 0) {
                 console.log('Sorry, you can add secret ingredient only once before ingredient');
             } else if (secretIngredient < 1) {
                 _calories += secretCalories;
@@ -37,14 +48,14 @@ class Hamburger{
                 console.log('Sorry, you can add secret ingredient only once.');
             }
         }
-        if (typeSecretIngredient) {
-            this.addSecretIngredient();
-        }
 
+        this.bite = () => {
+            biteValue += 1;
+        }
     }
 }
 
-const myHamburger = new Hamburger('classic', 600, true);
+const myHamburger = new Hamburger('classic', 600);
 // console.log(myHamburger.getCalories());
 // myHamburger.setCalories(700);
 // console.log(myHamburger.getCalories());
@@ -56,5 +67,12 @@ const myHamburger = new Hamburger('classic', 600, true);
 // myHamburger.addTomato();
 // console.log(myHamburger.getCalories());
 // myHamburger.addTomato();
-myHamburger.addSecretIngredient();
+// myHamburger.addSecretIngredient();
+// console.log(myHamburger.getCalories());
+myHamburger.bite();
+myHamburger.bite();
+myHamburger.bite();
+// myHamburger.addTomato();
+// myHamburger.addSecretIngredient();
+// myHamburger.addCheese();
 // console.log(myHamburger.getCalories());
