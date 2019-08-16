@@ -52,6 +52,23 @@ class Hamburger {
         this.bite = () => {
             biteValue += 1;
         }
+        this.info = () => {
+            let information = `${this.type.charAt(0).toUpperCase() + this.type.slice(1)} hamburger,`;
+            if(typeSecretIngredient){
+                information += ` with secret ingredient,`
+            }
+            if(cheese){
+                information += ` with cheese,`;
+            }
+            if(tomato){
+                information += ` with ${tomato} tomato,`
+            }
+            if(biteValue){
+                information += ` is bit ${biteValue} times.`;
+            }
+            information += ` Total calories: ${_calories}.`;
+            return information;
+        }
     }
 }
 
@@ -59,20 +76,23 @@ const myHamburger = new Hamburger('classic', 600);
 // console.log(myHamburger.getCalories());
 // myHamburger.setCalories(700);
 // console.log(myHamburger.getCalories());
-// myHamburger.addCheese();
+myHamburger.addSecretIngredient();
+myHamburger.addCheese();
 // console.log(myHamburger.getCalories());
 // myHamburger.addCheese();
 // myHamburger.addTomato();
 // console.log(myHamburger.getCalories());
 // myHamburger.addTomato();
 // console.log(myHamburger.getCalories());
-// myHamburger.addTomato();
+myHamburger.addTomato();
 // myHamburger.addSecretIngredient();
 // console.log(myHamburger.getCalories());
+
 myHamburger.bite();
 myHamburger.bite();
 myHamburger.bite();
 // myHamburger.addTomato();
-// myHamburger.addSecretIngredient();
+
 // myHamburger.addCheese();
 // console.log(myHamburger.getCalories());
+console.log(myHamburger.info());
