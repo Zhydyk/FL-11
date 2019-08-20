@@ -10,11 +10,13 @@ function create(proto, propertiesObject){
     if(typeof propertiesObject !== 'undefined'){
         throw new Error(`Doesn't support second argument`);
     }
-    function F(){}
+    function SomeFunc(){
+        return;
+    }
     
-    F.prototype = proto;
+    SomeFunc.prototype = proto;
     
-    return new F();
+    return new SomeFunc();
 }
 console.log(Object.getPrototypeOf(obj2) === obj1);
 console.log(obj2.prop); 
