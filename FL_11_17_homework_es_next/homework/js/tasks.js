@@ -33,15 +33,17 @@ function regroupObject(obj){
     let newObj = {
         age: obj.details.age,
         details: {
-            firstName: obj.firstName,
-            id:1,
-            university: obj.university
+            name: obj.name,
+            university: obj.details.university,
+            id:1
+            
         }
     }
     return newObj;
 }
 const oldObj = {name: 'Someone', details: {id: 1, age: 11, university: 'UNI'}};
 console.log(regroupObject(oldObj));
+
 //Task 5 
 function findUniqueElements(elem) {
     
