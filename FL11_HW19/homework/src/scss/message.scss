@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        h1{
+            text-align: center;
+        }
+    }
+    main{
+        button{
+            background-color: $bgcBtn;
+            border: 1px solid $borderBtn;
+            padding: 7px 15px;
+            border-radius: 10px;
+            margin: 5px;
+            outline: none; 
+        }
+        
+    }
+}
+
