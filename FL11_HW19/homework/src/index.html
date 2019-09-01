@@ -7,25 +7,36 @@
     <title>HW19_Tools</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <h1>Rock, Paper and Sciss</h1>
-            <div class="rules">
-                <h2>Rules:</h2>
-                <ul>
-                    <li class="rules-rock">Scissors beats a paper</li>
-                    <li class="rules-paper">Paper beats rock</li>
-                    <li class="rules-sciss">Rock beats scissors.</li>
-                </ul>
-                <p class="rules-text">And we play up to three wins!</p>
-            </div>
+    <div class="main-wrap">
+        <header class="header">
+          <p class="logo">Rock, Paper, or Scissors</p>
         </header>
-        <main>
-            <button class="btn-play">Let's play</button>
-            <button class="btn-reset" type="reset">Reset</button>
-            <div id="root"></div>
+        <main class="main">
+          <div class="info">
+            <h3>Rules:</h3>
+            <ul class="rules">
+              <li class="rule">Scissors beats a paper</li>
+              <li class="rule">Paper beats rock</li>
+              <li class="rule">Rock beats scissors</li>
+            </ul>
+          </div>
+          <div class="start-game-wrap">
+            <div>
+              <p>And we play up to three wins!</p>
+              <input class="start-game" type="button" name="start-game" value="LET'S GO!">
+              <input class="reset-game hide" type="button" name="reset" value="RESET">
+            </div>
+            <div class="game-elements hide">
+              <div id="rock" data-id="0"></div>
+              <div id="scissors" data-id="1"></div>
+              <div id="paper" data-id="2"></div>
+            </div>
+            <div class="battle-info">
+              <div class="battle-moves"></div>
+              <div class="result"></div>
+            </div>
+          </div>
         </main>
-        <footer></footer>
-    </div>
+      </div>
 </body>
 </html>

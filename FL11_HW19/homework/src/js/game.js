@@ -1,3 +1,0 @@
-function startGame(onePerson, secondPerson){
-    
-}

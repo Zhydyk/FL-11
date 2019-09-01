@@ -1,27 +1,45 @@
-require('./game');
-require ('../scss/message.scss');
-let rootNode = document.getElementById('root');
-let startGame = document.getElementsByClassName('btn-play')[0];
-let divWithBtn = document.createElement('div');
-let rockBtn = document.createElement('button');
-let paperBtn = document.createElement('button');
-let scissBtn = document.createElement('button');
+function startGame(firstPlayer, secondPlayer) {
+	winners(firstPlayer, secondPlayer);
+}
 
-startGame.addEventListener('click', () =>  {
-    
+function winners(firstPlayer, secondPlayer) {
 
-    rockBtn.class = 'btn-rock';
-    rockBtn.innerHTML = 'Rock';
-    paperBtn.class = 'btn-paper';
-    paperBtn.innerHTML = 'Paper'
-    scissBtn.class = 'btn-sciss';
-    scissBtn.innerHTML = 'Sciss';
+	let move = document.createElement('p');
+	battleMoves.appendChild(move);
+	round++;
 
-    divWithBtn.appendChild(rockBtn);
-    divWithBtn.appendChild(paperBtn);
-    divWithBtn.appendChild(scissBtn);
-    
-    rootNode.appendChild(divWithBtn);
-
-
-})
+	if (firstPlayer != secondPlayer) {	
+		if (firstPlayer == rock && secondPlayer == scissors) {
+			wins++;
+			move.innerHTML = `Round ${round},  Rock vs. Scissors, You’ve WON!`;
+		} else if (firstPlayer == rock && secondPlayer == paper) {
+			losts++;
+			move.innerHTML = `Round ${round},  Rock vs. Paper, You’ve LOST!`;
+		}
+	
+		if (firstPlayer == scissors && secondPlayer == paper) {
+			wins++;
+			move.innerHTML = `Round ${round},  Scissors vs. Paper, You’ve WON!`;
+		} else if (firstPlayer == scissors && secondPlayer == rock) {
+			losts++;
+			move.innerHTML = `Round ${round},  Scissors vs. Rock, You’ve LOST!`;
+		}
+	
+		if (firstPlayer == paper && secondPlayer == rock) {
+			wins++;
+			move.innerHTML = `Round ${round},  Paper vs. Rock, You’ve WON!`;
+		} else if (firstPlayer == paper && secondPlayer == scissors) {
+			losts++;
+			move.innerHTML = `Round ${round},  Paper vs. Scissors, You’ve LOST!`;
+		}
+	} else {
+		move.innerHTML = `Round ${round},  DROW!`;
+	}
+	if (round === 3) {
+		resetGameBtn.classList.remove('hide');
+		if (wins === losts) {
+			resultGame.innerHTML = "Game is finished. DROW!";
+		}
+		wins > losts ? resultGame.innerHTML = `Game is finished. You've WON!` : resultGame.innerHTML = `Game is finished. You've LOST!`;
+	}
+}
