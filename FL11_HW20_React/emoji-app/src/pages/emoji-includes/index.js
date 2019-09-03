@@ -1,0 +1,1 @@
+export { EmojiInfo } from './emoji-includes.component';

@@ -1,0 +1,22 @@
+$BtnPrimaryBgc: #6d8aec;
+$BtnPrimaryBgcHover: #637dd3;
+$BtnPrimaryText: #ffffff;
+
+.btnPrimary{
+    background-color: $BtnPrimaryBgc;
+    border-radius: 7px;
+    padding: 7px 20px;
+    border: none;
+    color:$BtnPrimaryText;
+    outline:none;
+    &:hover{
+        background-color:$BtnPrimaryBgcHover  ;
+    }
+    &:disabled{
+        background-color: lightgray;
+        cursor: not-allowed;
+    }
+}
+.text{
+    margin-right: 5%;
+}

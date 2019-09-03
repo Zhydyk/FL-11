@@ -1,0 +1,1 @@
+export { EmojiElement } from './emoji-element.component';

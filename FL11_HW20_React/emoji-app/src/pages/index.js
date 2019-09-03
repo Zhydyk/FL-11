@@ -1,0 +1,1 @@
+export { MainEmojiPage } from './pages.component';
