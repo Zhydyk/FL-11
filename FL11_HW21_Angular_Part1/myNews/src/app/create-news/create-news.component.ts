@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-news.component.scss']
 })
 export class CreateNewsComponent implements OnInit {
-
+  title_news = 'Create News'; 
   constructor() { }
-
+  Submit(){
+    console.log('Ok');
+  }
   ngOnInit() {
   }
 

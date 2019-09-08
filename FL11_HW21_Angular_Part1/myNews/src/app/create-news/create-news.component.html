@@ -1,1 +1,39 @@
-<p>create-news works!</p>
+<div class="container">
+    <header>
+        <div class="header_text">
+            <h1>{{ title_news }}</h1>
+        </div>
+    </header>
+    <main>
+        <form class="create_news">
+            <div class="row">
+                <div class="col-6">
+                    <label for="heading" class="pt-2">Heading:</label>
+                    <input type="text" class="form-control" id="heading" #heading />
+
+                    <label for="desc" class="pt-2">Short Description:</label>
+                    <input type="text" class="form-control" id="desc" #description />
+
+                    <label for="news-content" class="pt-2">Content:</label>
+                    <textarea name="news-content" id="news-content" cols="42" rows="7" #content></textarea>
+                </div>
+
+                <div class="col-6">
+                    <label for="date" class="pt-2">Date:</label>
+                    <input type="text" class="form-control" id="date" #date />
+
+                    <label for="author" class="pt-2">Author:</label>
+                    <input type="text" class="form-control" id="author" #author />
+
+                    <label for="url" class="pt-2">Source URL:</label>
+                    <input type="text" class="form-control" id="url" #url />
+
+                    <div class="d-flex justify-content-between font-weight-bold pt-5">
+                        <button class="btn_save btn_style" (click)="Submit()" routerLink="">Save</button>
+                        <button class="btn_cancel btn_style" routerLink="">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</div>

@@ -9,7 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {path: '', component: NewsComponent},
   {path: 'create-news', component: CreateNewsComponent},
-  {path: 'news-details', component: NewsLineDetailsComponent},
+  {path: 'news-details/:id', component: NewsLineDetailsComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

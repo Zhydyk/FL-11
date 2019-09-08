@@ -1,4 +1,6 @@
+import { NewsListService } from './../news-list.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-news-line-details',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsLineDetailsComponent implements OnInit {
   title_newsDetails = 'Details Source News';
-  constructor() { }
+  detailItem = {};
+  constructor(private carService: NewsListService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.paramMap.get("id");
+    this.detailItem = this.carService.findById(id);
   }
 
 }

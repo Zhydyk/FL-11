@@ -7,15 +7,13 @@
     <main>
         <div class="main_news">
             <div class="main_categories_foto">
-                <img src="https://cdn.pixabay.com/photo/2019/09/04/20/34/plantation-4452538_1280.jpg" alt="foto">
+                <img [src]="detailItem.image" alt="foto">
             </div>
             <div class="main_categories_info">
-                <h1>NewsLine</h1>
-                <p class="categories_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam at, deleniti exercitationem maxime
-                    incidunt laborum aliquam nam delectus dolorum molestias nemo consectetur, laboriosam temporibus
-                    obcaecati! Id nam reiciendis tenetur numquam?</p>
-                <p class="main_categories_date">Date:</p>
-                <p class="main_categories_author">Author</p>
+                <h1>{{detailItem.author}} {{detailItem.content}}</h1>
+                <p class="categories_text">{{detailItem.description}}</p>
+                <p class="main_categories_date">Date: {{detailItem.date}}</p>
+                <p class="main_categories_author">{{detailItem.author}}</p>
             </div>
         </div>
     </main>
