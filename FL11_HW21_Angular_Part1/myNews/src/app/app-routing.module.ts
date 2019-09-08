@@ -1,4 +1,3 @@
-import { AppComponent } from './app.component';
 import { CreateNewsComponent } from './create-news/create-news.component';
 import { NewsLineDetailsComponent } from './news-line-details/news-line-details.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: NewsComponent},
   {path: 'create-news', component: CreateNewsComponent},
   {path: 'news-details', component: NewsLineDetailsComponent},
   {path: '**', component: NotFoundComponent}

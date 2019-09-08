@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-line-details.component.scss']
 })
 export class NewsLineDetailsComponent implements OnInit {
-
+  title_newsDetails = 'Details Source News';
   constructor() { }
 
   ngOnInit() {

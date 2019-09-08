@@ -1,33 +1,41 @@
-<header>
-    <div class="header_text">
-        <h1>Source Name</h1>
-    </div>
-    <div class="header_navigation">
-        <div class="header_select header_position">
-            <input type="text">
+<div class="container">  
+    <header>
+        <div class="header_text">
+            <h1>{{title_news}}</h1>
         </div>
-        <div class="header_filter header_position">
-            <input type="text">
-            <button class="btn_filter">Filter</button>
-        </div>
-        <div class="header-add header_position">
-            <button class="btn_add--article"><a routerLink="/create-news">Article</a> </button>
-        </div>
-    </div>
-</header>
+        <nav class="header_navigation">
+            <select name="details" id="details" class="header_select header_position">
+                <option value="all">All catrgories</option>
+                <option value="bus">Bus</option>
+                <option value="car">Car</option>
+                <option value="motobike">Motobike</option>
+            </select>
+            <div class="header_filter header_position">
+                <input type="text" placeholder="Type your text...">
+                <button class="btn_filter btn_style">Filter</button>
+            </div>
+            <div class="header-add header_position">
+                <button class="btn_add btn_style"><a routerLink="create-news">Article</a> </button>
+            </div>
+        </nav>
+    </header>
+    <hr>
 
-<main>
-    <div class="main_news">
-        <div class="main_news_foto">
-            <div class="main--foto"><img src="" alt=""></div>
-            <div class="main--news">
-                <h3>NewsItem</h3>
-                <p></p>
-                <button class="btn_details"><a routerLink="/news-details">Details...</a></button>
+    <main>
+        <div class="main_news_categories">
+            <div class="categories_info">
+                <div class="categories_foto">
+                    <img src="https://cdn.pixabay.com/photo/2019/09/04/20/34/plantation-4452538_1280.jpg" alt="foto">
+                </div>
+                <div class="categories_news">
+                    <h3>NewsItem</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, laboriosam ipsum incidunt nulla qui at, corporis numquam temporibus, voluptatibus molestias distinctio! Saepe dicta quo expedita, beatae doloribus similique natus reiciendis.</p>
+                    <button class="btn_details btn_style"><a routerLink="news-details">Details...</a></button>
+                </div>
+            </div>
+            <div class="categories_date">
+                <p>Date:</p>
             </div>
         </div>
-        <div class="main_date">
-            <p>Date:</p>
-        </div>
-    </div>
-</main>
+    </main>
+</div>  
