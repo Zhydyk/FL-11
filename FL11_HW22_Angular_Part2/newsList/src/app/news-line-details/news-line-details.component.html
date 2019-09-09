@@ -1,0 +1,20 @@
+<div class="container">
+    <header>
+        <div class="header_text">
+            <h1>{{title_newsDetails}}</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main_news">
+            <div class="main_categories_foto">
+                <img [src]="detailItem.imageUrl" alt="foto">
+            </div>
+            <div class="main_categories_info">
+                <h1>{{detailItem.title}} {{detailItem.model}}</h1>
+                <p class="categories_text">{{detailItem.description}}</p>
+                <p class="main_categories_date">Date: {{detailItem.date}}</p>
+                <p class="main_categories_author">{{detailItem.author}}</p>
+            </div>
+        </div>
+    </main>
+</div>

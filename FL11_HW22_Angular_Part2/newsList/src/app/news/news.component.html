@@ -22,19 +22,19 @@
     <hr>
 
     <main>
-        <div class="main_news_categories" *ngFor="let car of filteredNews">
+        <div class="main_news_categories" *ngFor="let cars of filteredNews">
             <div class="categories_info">
                 <div class="categories_foto">
-                    <img [src]="car.image" alt="foto">
+                    <img [src]="cars.imageUrl" alt="foto">
                 </div>
                 <div class="categories_news">
-                    <h3>{{car.author}} {{car.content}}</h3>
-                    <p>{{car.description}}</p>
-                    <button class="btn_details btn_style"><a [routerLink]="['news-details', car.id]">Details...</a></button>
+                    <h3>{{cars.title}}</h3>
+                    <p>{{cars.description}}</p>
+                    <button class="btn_details btn_style"><a [routerLink]="['news-details', cars.id]">Details...</a></button>
                 </div>
             </div>
             <div class="categories_date">
-                <p>Date: {{car.date}}</p>
+                <p>Date: {{cars.date}}</p>
             </div>
         </div>
     </main>
